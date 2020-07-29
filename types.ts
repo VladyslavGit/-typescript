@@ -21,13 +21,13 @@ let variable: any = 42;
 variable = "New String";
 variable = [];
 
-// ====
+// ==== void - функция ничего не возвращает
 function sayMyName(name: string): void {
   console.log(name);
 }
 sayMyName("Vlad");
 
-// Never
+// Never - ф-я возвращает ошибку, либо постоянно выполняется
 function throwError(message: string): never {
   throw new Error(message);
 }
@@ -40,11 +40,12 @@ function infinite(): never {
 type Login = string;
 
 const login: Login = "admin";
-// const login2: Login = 2
+// const login2: Login = 2 - ошибка
 
+//2 типа
 type ID = string | number;
 const id1: ID = 1234;
 const id2: ID = "1234";
-// const id3: ID = true
+// const id3: ID = true - ошибка
 
 type SomeType = string | null | undefined;
